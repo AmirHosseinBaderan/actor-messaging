@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ActorMessaging.Server": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
