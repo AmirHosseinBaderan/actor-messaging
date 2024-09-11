@@ -1,6 +1,8 @@
-﻿
+﻿using ActorMessaging.Client.Actor;
+using ActorMessaging.Common.Model;
 using Akka.Actor;
 using Akka.Configuration;
+
 
 var config = ConfigurationFactory.ParseString(@"
             akka {
@@ -12,17 +14,19 @@ var config = ConfigurationFactory.ParseString(@"
             }");
 
 ActorSystem system = ActorSystem.Create(ClientName, config);
-ActorSelection actorSelection = system.ActorSelection($"akka.tcp://{ServerName}@{Host}:{Port}/user/{MessageActorName}");
+IActorRef actorSelection = await system
+                            .ActorSelection($"akka.tcp://{ServerName}@{Host}:{Port}/user/{MessageActorName}")
+                            .ResolveOne(TimeSpan.FromSeconds(3));
+
+Guid id = Guid.NewGuid();
+Props props = Props.Create(() => new ClientActor(id, actorSelection));
+IActorRef clientActor = system.ActorOf(props, ClientMessageActorName);
 
 while (true)
 {
-    Write("Please write your message : ");
-    string? message = ReadLine();
-    if (message == "exit")
-    {
-        WriteLine("Finish Thank your :)");
-        break;
-    }
+    Write("Write a message : ");
+    var message = ReadLine();
+    if (message == "exit") break;
 
-    actorSelection.Tell(message);
+    actorSelection.Tell(new ClientMessage(id, message ?? "..."));
 }

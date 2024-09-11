@@ -14,7 +14,7 @@ Config config = ConfigurationFactory.ParseString(@"
             }");
 
 using ActorSystem system = ActorSystem.Create(ServerName, config);
-var actor = system.ActorOf(Props.Create(() => new MessageActor()), MessageActorName);
+var actor = system.ActorOf<ServerActor>(MessageActorName);
 
 WriteLine($"Server started at : {Host}:{Port} \n Press any key to stop server :)");
 ReadLine();
