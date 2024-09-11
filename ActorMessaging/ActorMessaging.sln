@@ -13,6 +13,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorMessaging.Server", "Sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorMessaging.Client", "Src\Client\ActorMessaging.Client\ActorMessaging.Client.csproj", "{611ACB17-07EE-4A85-A72F-4FF4B17DF306}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D786126E-0854-47F1-957C-83C80672A0F4}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E13DD165-F5F1-4AF9-AA42-9A50EF5158D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorMessaging.Common", "Src\Common\ActorMessaging.Common\ActorMessaging.Common.csproj", "{0FEE9756-CFB7-4A77-AC04-74B80A531F4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +38,10 @@ Global
 		{611ACB17-07EE-4A85-A72F-4FF4B17DF306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611ACB17-07EE-4A85-A72F-4FF4B17DF306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611ACB17-07EE-4A85-A72F-4FF4B17DF306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FEE9756-CFB7-4A77-AC04-74B80A531F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEE9756-CFB7-4A77-AC04-74B80A531F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEE9756-CFB7-4A77-AC04-74B80A531F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEE9756-CFB7-4A77-AC04-74B80A531F4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +51,8 @@ Global
 		{6B373FA4-7935-4E20-B8A7-B5E8301C4F12} = {971E9DD8-36AE-4020-832F-D5D5A2C09E48}
 		{DC6E353B-136B-4F21-B3E7-11D7C6B19C26} = {1F7E5D63-2CDC-4697-B250-AFE72D7B525E}
 		{611ACB17-07EE-4A85-A72F-4FF4B17DF306} = {6B373FA4-7935-4E20-B8A7-B5E8301C4F12}
+		{E13DD165-F5F1-4AF9-AA42-9A50EF5158D0} = {971E9DD8-36AE-4020-832F-D5D5A2C09E48}
+		{0FEE9756-CFB7-4A77-AC04-74B80A531F4F} = {E13DD165-F5F1-4AF9-AA42-9A50EF5158D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67FAE680-BE5D-49E5-B4B1-065AFCD7B2F9}

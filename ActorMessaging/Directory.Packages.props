@@ -4,6 +4,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Akka" Version="1.5.28" />
+    <PackageVersion Include="Akka.DependencyInjection" Version="1.5.28" />
+    <PackageVersion Include="Akka.Remote" Version="1.5.28" />
     <PackageVersion Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
 </Project>
